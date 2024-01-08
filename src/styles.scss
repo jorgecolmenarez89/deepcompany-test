@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.loading-content{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

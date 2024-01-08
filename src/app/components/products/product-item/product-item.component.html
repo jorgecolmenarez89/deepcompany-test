@@ -1,0 +1,14 @@
+<a  hr="#"  class="product-item">
+    <div class="card">
+        <div class="card-body">
+            <div class="content-img">
+                <img [src]="product.medium[0].image"  [alt]="product.title" />
+            </div>
+            <div class="content-info">
+                <p class="title">{{ product.title }}</p>
+                <h5 class="brand">{{ product.brand}}</h5>
+                <h5 class="price">${{ product.regular_price}}</h5>
+            </div>
+        </div>
+    </div>
+</a>

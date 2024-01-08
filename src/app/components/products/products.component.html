@@ -1,0 +1,25 @@
+<div class="page-products">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-3" *ngFor="let product of productsToDisplay; index as i;" >
+                <app-product-item [product]="product" ></app-product-item>
+            </div>
+        </div>
+
+        <div class="pagination-content">
+            <app-paginator
+            [current]="current"
+            [total]="total"
+            (goTo)="onGoTo($event)"
+            (next)="onNext($event)"
+            (previous)="onPrevious($event)"
+          ></app-paginator>
+        </div>
+
+        <div *ngIf="loading === true" class="loading-content">
+            <app-loader></app-loader>
+        </div>
+
+    </div>
+</div>
+
