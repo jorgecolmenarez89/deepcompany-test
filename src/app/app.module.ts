@@ -23,6 +23,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: [LoaderComponent],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -31,7 +31,6 @@ export class ProductsComponent implements OnInit {
 
   getProducts(page: number){
     this.productsService.getProducts(page).subscribe((resp: IResponse) => {
-      console.log(resp)
       this.productsResponse = resp;
       this.productsToDisplay  = resp.results
       this.total = resp.pages
@@ -43,7 +42,6 @@ export class ProductsComponent implements OnInit {
     this.loading = true;
     this.current = 1;
     this.getProducts(this.current);
-    this.total = Math.ceil(this.productsResponse.records / this.perPage);
   }
 
   onGoTo(page: number): void {
